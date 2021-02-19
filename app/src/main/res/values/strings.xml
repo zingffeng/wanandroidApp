@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">wanandroid</string>
+
+    <string name="home">首页</string>
+    <string name="square">广场</string>
+    <string name="system">体系</string>
+    <string name="mine">我的</string>
+    <string name="project">项目</string>
+
+    <string name="new_">New</string>
+    <string name="top_">Top</string>
+    <string name="published_site">本站发布</string>
+    <string name="author_hint">作者：</string>
+    <string name="sharer_hint">分享人：</string>
+    <string name="sort_hint">分类：</string>
+    <string name="time_hint">时间：</string>
+
+    <string name="navigation">导航</string>
+
+    <string name="login">登录</string>
+    <string name="login_successful">登录成功</string>
+    <string name="param_error">后台参数出错</string>
+    <string name="not_to_login">未登录</string>
+    <string name="level_hint">等级：</string>
+    <string name="line">--</string>
+    <string name="rank_hint">排行：</string>
+    <string name="my_coins">我的积分</string>
+    <string name="my_collects">我的收藏</string>
+    <string name="my_shares">我的分享</string>
+    <string name="system_setting">系统设置</string>
+    <string name="logout">退出登录</string>
+
+    <string name="this_is_the_last">这是最后一个</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 更改下拉刷新文字 -->
+    <string name="srl_header_pulling">下拉可以刷新</string>
+    <string name="srl_header_refreshing">正在刷新…</string>
+    <string name="srl_header_loading">正在加载…</string>
+    <string name="srl_header_release">释放立即刷新</string>
+    <string name="srl_header_finish">刷新完成</string>
+    <string name="srl_header_failed">刷新失败</string>
+    <string name="srl_header_update">上次更新 M-d HH:mm</string>
+    <string name="srl_header_secondary">释放进入二楼</string>
+
+    <string name="srl_footer_pulling">上拉加载更多</string>
+    <string name="srl_footer_release">释放立即加载</string>
+    <string name="srl_footer_loading">正在加载…</string>
+    <string name="srl_footer_refreshing">正在刷新…</string>
+    <string name="srl_footer_finish">加载完成</string>
+    <string name="srl_footer_failed">加载失败</string>
+    <string name="srl_footer_nothing">没有更多数据了</string>
+
+</resources>

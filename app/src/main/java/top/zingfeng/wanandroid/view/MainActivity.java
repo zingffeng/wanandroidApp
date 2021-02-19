@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<CollectBean> call, Response<CollectBean> response) {
                 CollectBean.DataBean data = response.body().getData();
                 if (data != null){
-                    Log.d("===============>", "onResponse: " + response.body().getData().getSize());
+//                    Log.d("===============>", "onResponse: " + response.body().getData().getSize());
                 }
             }
 

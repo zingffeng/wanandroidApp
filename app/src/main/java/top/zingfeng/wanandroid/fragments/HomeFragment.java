@@ -65,9 +65,6 @@ public class HomeFragment extends Fragment {
 
     private Context mCtx;
 
-    @BindView(R.id.nv_page)
-    NestedScrollView mNvPage;
-
     @BindView(R.id.home_banner)
     Banner mHomeBanner;
 
@@ -79,11 +76,6 @@ public class HomeFragment extends Fragment {
 
     @BindView(R.id.srl_refresh)
     SmartRefreshLayout mSrlRefresh;
-
-//    @BindView(R.id.fab_top)
-//    FloatingActionButton mFabTop;
-
-    DrawerLayout mDlSideLayout;
 
     private Integer page = 1;
 
@@ -124,24 +116,7 @@ public class HomeFragment extends Fragment {
         setPullRefresh();
     }
 
-    private void initEvent(){
-//        mFabTop.setOnClickListener(v -> {
-//            mNvPage.smoothScrollTo(0,0);
-//        });
-
-
-//        AppBarLayout appBarLayout =  getActivity().findViewById(R.id.abl_bar);
-//        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-//            @Override
-//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-//                if (verticalOffset == 0){
-//
-//                }else {
-//
-//                }
-//            }
-//        });
-    }
+    private void initEvent(){}
 
     /**
      * 请求首页获取数据

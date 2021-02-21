@@ -4,6 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import top.zingfeng.wanandroid.network.bean.NavigationBean;
 import top.zingfeng.wanandroid.network.bean.SystemArticleListBean;
 import top.zingfeng.wanandroid.network.bean.SystemArticleBean;
 
@@ -22,4 +23,7 @@ public interface SystemService {
 
     @GET(value = "/article/list/{page}/json/")
     Call<SystemArticleListBean> getSystemArticleList(@Path(value = "page") Integer page, @Query(value = "cid") Integer cid);
+
+    @GET(value = "/navi/json")
+    Call<NavigationBean> getNavigationList();
 }

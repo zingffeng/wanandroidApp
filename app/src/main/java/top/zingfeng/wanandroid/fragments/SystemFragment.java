@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,13 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import top.zingfeng.wanandroid.R;
+import top.zingfeng.wanandroid.adapter.NavigationViewPageAdapter;
 
 /**
  * @author zingfeng
@@ -32,6 +37,9 @@ public class SystemFragment extends Fragment {
 
     @BindView(R.id.fl_content)
     FrameLayout mFlContent;
+
+//    @BindView(R.id.vp_content)
+//    ViewPager mVpContent;
 
     private SystemDetailFragment mSystemDetailFragment;
     private SystemNavigationFragment mSystemNavigationFragment;
@@ -60,11 +68,12 @@ public class SystemFragment extends Fragment {
     }
 
     private void initData(){
+        mSystemDetailFragment = new SystemDetailFragment();
+        mSystemNavigationFragment = new SystemNavigationFragment();
+
         mTlSystemTab.addTab(mTlSystemTab.newTab().setText(getString(R.string.system)));
         mTlSystemTab.addTab(mTlSystemTab.newTab().setText(getString(R.string.navigation)));
 
-        mSystemDetailFragment = new SystemDetailFragment();
-        mSystemNavigationFragment = new SystemNavigationFragment();
         FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
         if (!mSystemDetailFragment.isAdded()){
             fragmentTransaction.add(R.id.fl_content, mSystemDetailFragment, "homeFragment");

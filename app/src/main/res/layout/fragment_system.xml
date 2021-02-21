@@ -33,6 +33,12 @@
 
         </LinearLayout>
 
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/vp_content"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
         <FrameLayout
             android:id="@+id/fl_content"
             android:layout_width="match_parent"

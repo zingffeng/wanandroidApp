@@ -6,7 +6,7 @@ WanAndroid项目采用Java语言编写，使用Retrofit、Glide、ARouter、Butt
 
 ## 项目截图
 
-| <img src="D:\Project\Android\wanandroid\imgs\Screenshot_1613875530.png" style="zoom:15%;" /> | <img src="D:\Project\Android\wanandroid\imgs\Screenshot_1613875592.png" style="zoom:15%;" /> | <img src="D:\Project\Android\wanandroid\imgs\Screenshot_1613875605.png" style="zoom:15%;" /> | <img src="D:\Project\Android\wanandroid\imgs\Screenshot_1613875611.png" style="zoom:15%;" /> |
+| <img src="imgs\Screenshot_1613875530.png" style="zoom:15%;" /> | <img src="imgs\Screenshot_1613875592.png" style="zoom:15%;" /> | <img src="imgs\Screenshot_1613875605.png" style="zoom:15%;" /> | <img src="imgs\Screenshot_1613875611.png" style="zoom:15%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                                                              |                                                              |                                                              |                                                              |
 |                                                              |                                                              |                                                              |                                                              |

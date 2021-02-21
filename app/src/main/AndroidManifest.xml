@@ -17,7 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.LoginActivity"></activity>
+        <activity android:name=".view.RegisterActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".view.LoginActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".view.SearchDetailActivity" />
+        <activity android:name=".view.SearchActivity" />
         <activity android:name=".view.SystemItemActivity" />
         <activity android:name=".view.ArticleDetailActivity" />
         <activity android:name=".view.MainActivity">

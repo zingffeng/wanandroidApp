@@ -1,6 +1,6 @@
 package top.zingfeng.wanandroid.network.services;
 
-import retrofit2.Call;
+    import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -8,7 +8,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 import top.zingfeng.wanandroid.network.bean.ArticleBean;
 import top.zingfeng.wanandroid.network.bean.CollectBean;
-import top.zingfeng.wanandroid.network.bean.UserBean;
+    import top.zingfeng.wanandroid.network.bean.RegisterBean;
+    import top.zingfeng.wanandroid.network.bean.UserBean;
 import top.zingfeng.wanandroid.network.bean.UserInfoBean;
 
 /**
@@ -25,6 +26,17 @@ public interface AccountService {
     @POST(value = "/user/login")
     @FormUrlEncoded
     Call<UserBean> login(@Field("username") String username, @Field("password") String password);
+
+    /**
+     * 注册请求
+     * @param username 账号
+     * @param password 密码
+     * @param repassword 第二次密码
+     * @return 返回请求数据
+     */
+    @POST(value = "/user/register")
+    @FormUrlEncoded
+    Call<RegisterBean> register(@Field("username") String username, @Field("password") String password, @Field("repassword") String repassword);
 
     /**
      *

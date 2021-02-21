@@ -31,7 +31,7 @@
             android:singleLine="true"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:text="@string/login" />
+            android:text="@string/registered" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -45,16 +45,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/user_login"
+            android:text="@string/user_registered"
             android:textColor="@color/black"
             android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/please_wanandroid_login"
+            android:layout_marginTop="16dp"
+            android:text="@string/only_registered_can_login"
             android:textSize="14sp"/>
+
 
     </LinearLayout>
 
@@ -72,52 +73,61 @@
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/account"
-                android:textColor="@color/black"/>
+                android:hint="@string/account"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
 
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColor="@color/black"/>
+                android:hint="@string/password"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
 
-            <Button
-                android:id="@+id/btn_login"
+            <EditText
+                android:id="@+id/et_password_again"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:text="@string/login"
-                android:textColor="@color/white"/>
+                android:hint="@string/input_password_again"/>
 
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_goto_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:padding="16dp"
-            android:text="@string/no_have_account_goto_registered"
-            android:gravity="end"
-            android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/btn_registered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/registered"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_goto_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="@string/have_account_goto_login"
+        android:gravity="end"
+        android:textSize="14sp"/>
 
 </LinearLayout>

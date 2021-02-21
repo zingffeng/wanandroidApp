@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -30,6 +32,9 @@ import top.zingfeng.wanandroid.network.services.AccountService;
 @Route(path = "/view/LoginActivity")
 public class LoginActivity extends AppCompatActivity {
 
+    @BindView(R.id.iv_side_nav)
+    ImageView mIvSideNav;
+
     @BindView(R.id.et_username)
     EditText mEtUsername;
 
@@ -38,6 +43,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_login)
     Button mBtnLogin;
+
+    @BindView(R.id.tv_goto_register)
+    TextView mTvGotoRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +96,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
             });
+        });
+        mIvSideNav.setOnClickListener(v -> {
+            finish();
+        });
+        mTvGotoRegister.setOnClickListener(v -> {
+            ARouter.getInstance().build("/view/RegisterActivity").navigation();
         });
     }
 }

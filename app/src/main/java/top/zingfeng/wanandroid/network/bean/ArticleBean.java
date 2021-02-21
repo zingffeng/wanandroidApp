@@ -1,6 +1,10 @@
 package top.zingfeng.wanandroid.network.bean;
 
+import androidx.core.text.HtmlCompat;
+
 import java.util.List;
+
+import static androidx.core.text.HtmlCompat.FROM_HTML_MODE_LEGACY;
 
 /**
  * @author zingfeng
@@ -405,7 +409,7 @@ public class ArticleBean {
             }
 
             public String getTitle() {
-                return title;
+                return HtmlCompat.fromHtml(title, FROM_HTML_MODE_LEGACY).toString();
             }
 
             public void setTitle(String title) {

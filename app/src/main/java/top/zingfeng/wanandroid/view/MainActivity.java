@@ -1,11 +1,13 @@
 package top.zingfeng.wanandroid.view;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -75,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.dl_side_layout)
     DrawerLayout mDlSideLayout;
+
+    @BindView(R.id.iv_search)
+    ImageView mIvSearch;
 
     private TextView mTvUsername;
     private TextView mTvLevel;
@@ -204,13 +209,25 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mLlLogout.setOnClickListener(v -> {
-            SharedPreferences config = getSharedPreferences("config", Context.MODE_PRIVATE);
-            SharedPreferences.Editor edit = config.edit();
-            HashSet<String> hashSet = new HashSet<>();
-            hashSet.add("cookie");
-            edit.putStringSet("cookie", hashSet);
-            edit.putString("username", "");
-            edit.apply();
+            AlertDialog.Builder alertDialog =  new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogCustom);
+            alertDialog.setMessage(getString(R.string.sure_to_logout));
+            alertDialog.setNegativeButton(getString(R.string.cancel), (dialog, which) -> {
+                dialog.dismiss();
+            });
+            alertDialog.setPositiveButton(getString(R.string.sure), ((dialog, which) -> {
+                SharedPreferences config = getSharedPreferences("config", Context.MODE_PRIVATE);
+                SharedPreferences.Editor edit = config.edit();
+                HashSet<String> hashSet = new HashSet<>();
+                hashSet.add("cookie");
+                edit.putStringSet("cookie", hashSet);
+                edit.putString("username", "");
+                edit.apply();
+            }));
+            alertDialog.show();
+        });
+
+        mIvSearch.setOnClickListener(v -> {
+            ARouter.getInstance().build("/view/SearchActivity").navigation();
         });
     }
 

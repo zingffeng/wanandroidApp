@@ -6,45 +6,45 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tl_system_tab"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-                app:tabMode="scrollable"
-                app:tabGravity="fill"
-                app:tabPaddingStart="16dp"
-                app:tabPaddingEnd="16dp"
-                app:tabBackground="@color/colorPrimary"
-                app:tabTextColor="@color/white"
-                app:tabIndicatorColor="@color/white"
-                />
+                android:background="@color/colorPrimary">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tl_system_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                    app:tabMode="scrollable"
+                    app:tabGravity="fill"
+                    app:tabPaddingStart="16dp"
+                    app:tabPaddingEnd="16dp"
+                    app:tabBackground="@color/colorPrimary"
+                    app:tabTextColor="@color/white"
+                    app:tabIndicatorColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+    <!--        <androidx.viewpager.widget.ViewPager-->
+    <!--            android:id="@+id/vp_content"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
         </LinearLayout>
-
-<!--        <androidx.viewpager.widget.ViewPager-->
-<!--            android:id="@+id/vp_content"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
-
-        <FrameLayout
-            android:id="@+id/fl_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
